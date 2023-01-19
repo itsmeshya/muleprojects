@@ -1,0 +1,5 @@
+<testExecutions version="1">
+  <file path="src\test\munit\get-user-test-suite.xml"/>
+  <file path="src\test\munit\get-account-test-suite.xml"/>
+  <file path="src\test\munit\api-account-suite.xml"/>
+</testExecutions>

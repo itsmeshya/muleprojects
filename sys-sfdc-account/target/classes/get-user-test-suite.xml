@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="get-user-test-suite.xml" >
+		<munit:parameterizations file="getuser\get-user.yaml" />
+	</munit:config>
+	<munit:test name="get-user-test-suiteTest" doc:id="8fd6748a-d5a4-4ea0-990c-9c69b4be17ff" >
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock when" doc:id="cd6d845c-48cc-44a0-a05a-a87aad096513" processor="salesforce:query">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="429dfb25-df3c-4e5d-ace7-ca041a70fb6e" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value='#[output application/json --- readUrl("classpath://getuser/get-user-response.json")] ' mediaType="application/json" encoding="UTF-8" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Event" doc:id="d757bc43-4935-4721-8a97-669f50ac5cf7" >
+				<munit:attributes value='#[output application/json --- readUrl("classpath://getuser/get-user-attributes.json")] ' encoding="UTF-8" mediaType="application/json" />
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow Reference" doc:id="43f6ebf0-d26c-4703-9cc9-d75bbffcc728" name="get:\user:api-account-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:verify-call doc:name="Verify call" doc:id="0414e460-4e52-4995-9fd0-9fec89cd26dc" processor="salesforce:query" times="${sfdcQueryCalls}">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="429dfb25-df3c-4e5d-ace7-ca041a70fb6e" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

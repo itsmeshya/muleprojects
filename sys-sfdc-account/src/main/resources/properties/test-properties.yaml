@@ -1,0 +1,9 @@
+autodiscovery:
+  id: "1234"
+  
+sfdc:
+  username: "shyajayaraman@gmail.com"
+  loginurl: "https://login.salesforce.com/services/Soap/u/55.0"  
+  query:
+    get-account: "select id,name,phone,lastmodifieddate,shippingCity,ShippingState,ShippingCountry,shippingPostalcode,email__c from account where lastModifiedDate > "
+    get-user: "SELECT Email,Id,Name,Phone,Username FROM user where userName"

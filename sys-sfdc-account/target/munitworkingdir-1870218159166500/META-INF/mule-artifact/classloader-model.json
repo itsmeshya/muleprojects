@@ -1,0 +1,229 @@
+{
+  "version": "1.2.0",
+  "artifactCoordinates": {
+    "groupId": "86915319-0e12-4629-90f9-e906e80467c5",
+    "artifactId": "common-api-template",
+    "version": "1.0.0",
+    "type": "jar",
+    "classifier": "mule-application"
+  },
+  "dependencies": [
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.connectors",
+        "artifactId": "mule-http-connector",
+        "version": "1.7.1",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/connectors/mule-http-connector/1.7.1/mule-http-connector-1.7.1-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.connectors",
+        "artifactId": "mule-sockets-connector",
+        "version": "1.2.2",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/connectors/mule-sockets-connector/1.2.2/mule-sockets-connector-1.2.2-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.connectors",
+        "artifactId": "mule-email-connector",
+        "version": "1.6.0",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/connectors/mule-email-connector/1.6.0/mule-email-connector-1.6.0-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "com.mulesoft.connectors",
+        "artifactId": "mule-salesforce-connector",
+        "version": "10.15.0",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/com/mulesoft/connectors/mule-salesforce-connector/10.15.0/mule-salesforce-connector-10.15.0-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.connectors",
+        "artifactId": "mule-objectstore-connector",
+        "version": "1.1.6",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/connectors/mule-objectstore-connector/1.1.6/mule-objectstore-connector-1.1.6-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "com.mulesoft.modules",
+        "artifactId": "mule-secure-configuration-property-module",
+        "version": "1.2.5",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/com/mulesoft/modules/mule-secure-configuration-property-module/1.2.5/mule-secure-configuration-property-module-1.2.5-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "86915319-0e12-4629-90f9-e906e80467c5",
+        "artifactId": "sfdc-account-sapi",
+        "version": "1.0.0",
+        "type": "zip",
+        "classifier": "raml"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/86915319-0e12-4629-90f9-e906e80467c5/sfdc-account-sapi/1.0.0/sfdc-account-sapi-1.0.0-raml.zip"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "86915319-0e12-4629-90f9-e906e80467c5",
+        "artifactId": "common-fragment",
+        "version": "1.0.1",
+        "type": "zip",
+        "classifier": "raml-fragment"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/86915319-0e12-4629-90f9-e906e80467c5/common-fragment/1.0.1/common-fragment-1.0.1-raml-fragment.zip"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.modules",
+        "artifactId": "mule-apikit-module",
+        "version": "1.6.1",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/modules/mule-apikit-module/1.6.1/mule-apikit-module-1.6.1-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "com.mulesoft.munit",
+        "artifactId": "munit-runner",
+        "version": "2.3.11",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/com/mulesoft/munit/munit-runner/2.3.11/munit-runner-2.3.11-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "com.mulesoft.munit",
+        "artifactId": "munit-tools",
+        "version": "2.3.11",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/com/mulesoft/munit/munit-tools/2.3.11/munit-tools-2.3.11-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.weave",
+        "artifactId": "assertions",
+        "version": "1.0.2",
+        "type": "jar"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/weave/assertions/1.0.2/assertions-1.0.2.jar",
+      "resources": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/maven/org.mule.weave/assertions/pom-default.xml",
+        "META-INF/maven/org.mule.weave/assertions/pom.properties",
+        "dw/test/Asserts.dwl",
+        "dw/test/internal/Utils.dwl"
+      ]
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.weave",
+        "artifactId": "wlang",
+        "version": "2.2.2",
+        "type": "jar"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/weave/wlang/2.2.2/wlang-2.2.2.jar",
+      "resources": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/maven/org.mule.weave/wlang/pom-default.xml",
+        "META-INF/maven/org.mule.weave/wlang/pom.properties",
+        "META-INF/native-image/resource-config.json",
+        "dw/Core.dwl",
+        "dw/Crypto.dwl",
+        "dw/Runtime.dwl",
+        "dw/System.dwl",
+        "dw/core/Arrays.dwl",
+        "dw/core/Binaries.dwl",
+        "dw/core/Numbers.dwl",
+        "dw/core/Objects.dwl",
+        "dw/core/Strings.dwl",
+        "dw/core/URL.dwl",
+        "dw/extension/DataFormat.dwl",
+        "dw/module/Multipart.dwl",
+        "dw/util/Diff.dwl",
+        "dw/util/Timer.dwl",
+        "dw/util/Tree.dwl",
+        "dw/util/Values.dwl"
+      ]
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.scala-lang",
+        "artifactId": "scala-library",
+        "version": "2.12.7",
+        "type": "jar"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar",
+      "packages": [
+        "scala",
+        "scala.annotation",
+        "scala.annotation.meta",
+        "scala.annotation.unchecked",
+        "scala.beans",
+        "scala.collection",
+        "scala.collection.concurrent",
+        "scala.collection.convert",
+        "scala.collection.generic",
+        "scala.collection.immutable",
+        "scala.collection.mutable",
+        "scala.collection.parallel",
+        "scala.collection.parallel.immutable",
+        "scala.collection.parallel.mutable",
+        "scala.collection.script",
+        "scala.compat",
+        "scala.concurrent",
+        "scala.concurrent.duration",
+        "scala.concurrent.forkjoin",
+        "scala.concurrent.impl",
+        "scala.io",
+        "scala.math",
+        "scala.ref",
+        "scala.reflect",
+        "scala.reflect.macros.internal",
+        "scala.runtime",
+        "scala.runtime.java8",
+        "scala.sys",
+        "scala.sys.process",
+        "scala.text",
+        "scala.util",
+        "scala.util.control",
+        "scala.util.hashing",
+        "scala.util.matching"
+      ],
+      "resources": [
+        "META-INF/MANIFEST.MF",
+        "library.properties",
+        "rootdoc.txt"
+      ]
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.modules",
+        "artifactId": "mule-validation-module",
+        "version": "2.0.2",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/test/.m2/repository/org/mule/modules/mule-validation-module/2.0.2/mule-validation-module-2.0.2-mule-plugin.jar"
+    }
+  ]
+}
