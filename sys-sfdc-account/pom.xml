@@ -9,7 +9,7 @@
 
 	<name>sys-sfdc-account</name>
 
-	<description>common api templates</description>
+	<description>common api template</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
