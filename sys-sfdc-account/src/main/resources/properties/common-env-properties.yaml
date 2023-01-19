@@ -1,0 +1,21 @@
+sfdccodes: SALESFORCE:CONNECTIVITY, SALESFORCE:TIMEOUT
+
+http:
+   port: "8091"
+   
+email:
+  userName: "shyajayaraman@gmail.com"   
+  password: "lzomrmrdgbhargmp"
+  fromAddress: "shyajayaraman@gmail.com"
+  toAddress: "shyajayaraman@gmail.com"
+  host: "smtp.gmail.com"
+  port: "587"
+  subject: "error occured in api1 integration"
+
+apiName: "api1"
+apiVersion: "1.0.0"    
+
+retry:
+  count: "3"
+  interval: "10000"
+   

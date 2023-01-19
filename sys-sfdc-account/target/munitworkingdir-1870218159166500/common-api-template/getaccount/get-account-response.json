@@ -1,0 +1,47 @@
+[
+    {
+        "ExternalAccountid__c": "netsuite756",
+        "LastModifiedDate": "2022-10-19T23:47:42.000Z",
+        "EMAIL__c": "raks234@gmail.com",
+        "type": "Account",
+        "Name": "Raksha",
+        "OwnerId": "0054x0000067SQ0AAM",
+        "Phone": "9944100215",
+        "ShippingPostalCode": null,
+        "ShippingCountry": null,
+        "ShippingCity": null,
+        "ShippingState": "Texas",
+        "Id": "0014x00001QZLOkAAP",
+        "Active__c": "true"
+    },
+    {
+        "ExternalAccountid__c": "netsuite333",
+        "LastModifiedDate": "2022-11-02T15:27:09.000Z",
+        "EMAIL__c": "sank2606@gmail.com",
+        "type": "Account",
+        "Name": "Sankari",
+        "OwnerId": "0054x0000067SQ0AAM",
+        "Phone": "9944100215",
+        "ShippingPostalCode": null,
+        "ShippingCountry": null,
+        "ShippingCity": null,
+        "ShippingState": "virginia",
+        "Id": "0014x00001NdvmiAAB",
+        "Active__c": "true"
+    },
+    {
+        "ExternalAccountid__c": "netsuite990",
+        "LastModifiedDate": "2022-11-02T15:27:09.000Z",
+        "EMAIL__c": "riya2606@gmail.com",
+        "type": "Account",
+        "Name": "Riya",
+        "OwnerId": "0054x0000067SQ0AAM",
+        "Phone": "4099090676",
+        "ShippingPostalCode": null,
+        "ShippingCountry": null,
+        "ShippingCity": null,
+        "ShippingState": "Newjersy",
+        "Id": "0014x00001Ne512AAB",
+        "Active__c": "true"
+    }
+]

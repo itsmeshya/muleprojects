@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MULE_EE.4.4.0.get-account-test-suite" time="0.0" failures="0" errors="1" skipped="0" tests="1">
+  <properties>
+    <property key="java.specification.version" value="11"/>
+    <property key="sun.cpu.isalist" value="amd64"/>
+    <property key="sun.arch.data.model" value="64"/>
+    <property key="osgi.instance.area.default" value="file:/C:/Users/test/AnypointStudio/studio-workspace/"/>
+    <property key="eclipse.vmargs" value="--add-modules=ALL-SYSTEM&#xa;-Xms512m&#xa;-Xmx1024m&#xa;-XX:+UseG1GC&#xa;-XX:+UseStringDeduplication&#xa;-Dosgi.instance.area.default=@user.home/AnypointStudio/studio-workspace&#xa;-Dhttps.protocols=TLSv1.2,TLSv1.1,TLSv1&#xa;-Dsun.zip.disableMemoryMapping=true&#xa;-Dequinox.resolver.revision.batch.size=1&#xa;-Dmule.testingMode=true&#xa;-Dorg.mule.tooling.runtime.args=-XX:-UseBiasedLocking,-Dfile.encoding=UTF-8,-XX:+UseG1GC,-XX:+UseStringDeduplication&#xa;-Djdk.http.auth.tunneling.disabledSchemes=&#xa;-XX:ErrorFile=./studio_crash_report.log&#xa;-Dorg.mule.tooling.client.usecache=true&#xa;-Dtooling.concurrent.local.repository.enabled=false&#xa;-Dtooling.client.configuration.filter.parameters.reserved.names=false&#xa;-Dfile.encoding=UTF-8&#xa;-jar&#xa;C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar&#xa;"/>
+    <property key="ds.delayed.keepInstances.default" value="true"/>
+    <property key="java.vendor.url" value="https://adoptium.net/"/>
+    <property key="sun.boot.library.path" value="C:\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.1.4\bin"/>
+    <property key="sun.java.command" value="C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar -os win32 -ws win32 -arch x86_64 -showsplash -launcher C:\AnypointStudio\AnypointStudio.exe -name AnypointStudio --launcher.library C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.400.v20211117-0650\eclipse_11602.dll -startup C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar --launcher.overrideVmargs -exitdata 8070_168 -vm C:\AnypointStudio\\plugins/org.mule.tooling.jdk.win32.x86_64_1.1.4/bin/javaw.exe -vmargs --add-modules=ALL-SYSTEM -Xms512m -Xmx1024m -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.instance.area.default=@user.home/AnypointStudio/studio-workspace -Dhttps.protocols=TLSv1.2,TLSv1.1,TLSv1 -Dsun.zip.disableMemoryMapping=true -Dequinox.resolver.revision.batch.size=1 -Dmule.testingMode=true -Dorg.mule.tooling.runtime.args=-XX:-UseBiasedLocking,-Dfile.encoding=UTF-8,-XX:+UseG1GC,-XX:+UseStringDeduplication -Djdk.http.auth.tunneling.disabledSchemes= -XX:ErrorFile=./studio_crash_report.log -Dorg.mule.tooling.client.usecache=true -Dtooling.concurrent.local.repository.enabled=false -Dtooling.client.configuration.filter.parameters.reserved.names=false -Dfile.encoding=UTF-8 -jar C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"/>
+    <property key="jdk.debug" value="release"/>
+    <property key="org.osgi.supports.framework.requirebundle" value="true"/>
+    <property key="org.eclipse.equinox.simpleconfigurator.configUrl" value="file:org.eclipse.equinox.simpleconfigurator/bundles.info"/>
+    <property key="java.specification.vendor" value="Oracle Corporation"/>
+    <property key="org.osgi.framework.system.packages" value="com.sun.jarsigner, com.sun.java.accessibility.util, com.sun.javadoc, com.sun.jdi, com.sun.jdi.connect, com.sun.jdi.connect.spi, com.sun.jdi.event, com.sun.jdi.request, com.sun.jndi.ldap.spi, com.sun.management, com.sun.net.httpserver, com.sun.net.httpserver.spi, com.sun.nio.file, com.sun.nio.sctp, com.sun.security.auth, com.sun.security.auth.callback, com.sun.security.auth.login, com.sun.security.auth.module, com.sun.security.jgss, com.sun.source.doctree, com.sun.source.tree, com.sun.source.util, com.sun.tools.attach, com.sun.tools.attach.spi, com.sun.tools.javac, com.sun.tools.javadoc, com.sun.tools.jconsole, java.applet, java.awt, java.awt.color, java.awt.datatransfer, java.awt.desktop, java.awt.dnd, java.awt.event, java.awt.font, java.awt.geom, java.awt.im, java.awt.im.spi, java.awt.image, java.awt.image.renderable, java.awt.print, java.beans, java.beans.beancontext, java.io, java.lang, java.lang.annotation, java.lang.instrument, java.lang.invoke, java.lang.management, java.lang.module, java.lang.ref, java.lang.reflect, java.math, java.net, java.net.http, java.net.spi, java.nio, java.nio.channels, java.nio.channels.spi, java.nio.charset, java.nio.charset.spi, java.nio.file, java.nio.file.attribute, java.nio.file.spi, java.rmi, java.rmi.activation, java.rmi.dgc, java.rmi.registry, java.rmi.server, java.security, java.security.acl, java.security.cert, java.security.interfaces, java.security.spec, java.sql, java.text, java.text.spi, java.time, java.time.chrono, java.time.format, java.time.temporal, java.time.zone, java.util, java.util.concurrent, java.util.concurrent.atomic, java.util.concurrent.locks, java.util.function, java.util.jar, java.util.logging, java.util.prefs, java.util.regex, java.util.spi, java.util.stream, java.util.zip, javax.accessibility, javax.annotation.processing, javax.crypto, javax.crypto.interfaces, javax.crypto.spec, javax.imageio, javax.imageio.event, javax.imageio.metadata, javax.imageio.plugins.bmp, javax.imageio.plugins.jpeg, javax.imageio.plugins.tiff, javax.imageio.spi, javax.imageio.stream, javax.lang.model, javax.lang.model.element, javax.lang.model.type, javax.lang.model.util, javax.management, javax.management.loading, javax.management.modelmbean, javax.management.monitor, javax.management.openmbean, javax.management.relation, javax.management.remote, javax.management.remote.rmi, javax.management.timer, javax.naming, javax.naming.directory, javax.naming.event, javax.naming.ldap, javax.naming.spi, javax.net, javax.net.ssl, javax.print, javax.print.attribute, javax.print.attribute.standard, javax.print.event, javax.rmi.ssl, javax.script, javax.security.auth, javax.security.auth.callback, javax.security.auth.kerberos, javax.security.auth.login, javax.security.auth.spi, javax.security.auth.x500, javax.security.cert, javax.security.sasl, javax.smartcardio, javax.sound.midi, javax.sound.midi.spi, javax.sound.sampled, javax.sound.sampled.spi, javax.sql, javax.sql.rowset, javax.sql.rowset.serial, javax.sql.rowset.spi, javax.swing, javax.swing.border, javax.swing.colorchooser, javax.swing.event, javax.swing.filechooser, javax.swing.plaf, javax.swing.plaf.basic, javax.swing.plaf.metal, javax.swing.plaf.multi, javax.swing.plaf.nimbus, javax.swing.plaf.synth, javax.swing.table, javax.swing.text, javax.swing.text.html, javax.swing.text.html.parser, javax.swing.text.rtf, javax.swing.tree, javax.swing.undo, javax.tools, javax.transaction.xa, javax.xml, javax.xml.catalog, javax.xml.crypto, javax.xml.crypto.dom, javax.xml.crypto.dsig, javax.xml.crypto.dsig.dom, javax.xml.crypto.dsig.keyinfo, javax.xml.crypto.dsig.spec, javax.xml.datatype, javax.xml.namespace, javax.xml.parsers, javax.xml.stream, javax.xml.stream.events, javax.xml.stream.util, javax.xml.transform, javax.xml.transform.dom, javax.xml.transform.sax, javax.xml.transform.stax, javax.xml.transform.stream, javax.xml.validation, javax.xml.xpath, jdk.dynalink, jdk.dynalink.beans, jdk.dynalink.linker, jdk.dynalink.linker.support, jdk.dynalink.support, jdk.javadoc.doclet, jdk.jfr, jdk.jfr.consumer, jdk.jshell, jdk.jshell.execution, jdk.jshell.spi, jdk.jshell.tool, jdk.management.jfr, jdk.nashorn.api.scripting, jdk.nashorn.api.tree, jdk.net, jdk.nio, jdk.security.jarsigner, jdk.swing.interop, netscape.javascript, org.ietf.jgss, org.w3c.dom, org.w3c.dom.bootstrap, org.w3c.dom.css, org.w3c.dom.events, org.w3c.dom.html, org.w3c.dom.ls, org.w3c.dom.ranges, org.w3c.dom.stylesheets, org.w3c.dom.traversal, org.w3c.dom.views, org.w3c.dom.xpath, org.xml.sax, org.xml.sax.ext, org.xml.sax.helpers, sun.misc, sun.reflect"/>
+    <property key="eclipse.application" value="org.eclipse.ui.ide.workbench"/>
+    <property key="java.version.date" value="2022-04-19"/>
+    <property key="java.home" value="C:\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.1.4"/>
+    <property key="java.specification.name" value="Java Platform API Specification"/>
+    <property key="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property key="osgi.compatibility.bootdelegation.default" value="true"/>
+    <property key="user.script" value=""/>
+    <property key="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property key="java.runtime.version" value="11.0.15+10"/>
+    <property key="org.eclipse.swt.internal.deviceZoom" value="200"/>
+    <property key="file.encoding" value="UTF-8"/>
+    <property key="sun.zip.disableMemoryMapping" value="true"/>
+    <property key="attachMuleSources" value="true"/>
+    <property key="java.vendor.version" value="Temurin-11.0.15+10"/>
+    <property key="osgi.framework.extensions" value="reference:file:org.eclipse.osgi.compatibility.state_1.2.600.v20220207-1403.jar"/>
+    <property key="java.io.tmpdir" value="C:\Users\test\AppData\Local\Temp\"/>
+    <property key="mule.testingMode" value="true"/>
+    <property key="java.version" value="11.0.15"/>
+    <property key="osgi.bundles.defaultStartLevel" value="4"/>
+    <property key="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property key="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property key="java.library.path" value="C:\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.1.4\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\test\Downloads\WINDOWS.X64_193000_db_home\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\test\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\test\GitHubDesktop\bin;."/>
+    <property key="java.vendor" value="Eclipse Adoptium"/>
+    <property key="osgi.requiredJavaVersion" value="11"/>
+    <property key="org.eclipse.debug.ui.breakpoints.toggleFactoriesUsed" value="false"/>
+    <property key="org.mule.tooling.client.usecache" value="true"/>
+    <property key="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property key="sun.desktop" value="windows"/>
+    <property key="org.osgi.framework.version" value="1.10.0"/>
+    <property key="sun.awt.enableExtraMouseButtons" value="true"/>
+    <property key="user.timezone" value="America/New_York"/>
+    <property key="org.osgi.framework.uuid" value="26b82c6e-6395-45e0-b63a-6efbcc59edba"/>
+    <property key="mule.studio" value="true"/>
+    <property key="os.name" value="Windows 11"/>
+    <property key="java.vm.specification.version" value="11"/>
+    <property key="user.home" value="C:\Users\test"/>
+    <property key="osgi.tracefile" value="C:\anypointstudio-workspace\.metadata\trace.log"/>
+    <property key="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property key="ds.delayed.keepInstances" value="true"/>
+    <property key="chromium.args" value="--disable-web-security"/>
+    <property key="path.separator" value=";"/>
+    <property key="os.version" value="10.0"/>
+    <property key="org.osgi.supports.framework.fragment" value="true"/>
+    <property key="osgi.bundles" value="reference:file:org.eclipse.osgi.compatibility.state_1.2.600.v20220207-1403.jar,reference:file:org.eclipse.equinox.simpleconfigurator_1.4.0.v20210315-2228.jar@1:start"/>
+    <property key="osgi.framework.shape" value="jar"/>
+    <property key="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property key="eclipse.p2.profile" value="DefaultProfile"/>
+    <property key="osgi.os" value="win32"/>
+    <property key="osgi.splashLocation" value="c:\AnypointStudio\configuration\org.eclipse.equinox.launcher\org.mule.tooling.branding_7.13.0.202207261934\splash.bmp"/>
+    <property key="org.osgi.framework.storage" value="C:\AnypointStudio\configuration"/>
+    <property key="os.arch" value="amd64"/>
+    <property key="osgi.instance.area" value="file:/C:/anypointstudio-workspace/"/>
+    <property key="eclipse.launcher" value="C:\AnypointStudio\AnypointStudio.exe"/>
+    <property key="maven.multiModuleProjectDirectory" value=""/>
+    <property key="osgi.frameworkClassPath" value="., file:c:/AnypointStudio/plugins/org.eclipse.osgi.compatibility.state_1.2.600.v20220207-1403.jar"/>
+    <property key="eclipse.startTime" value="1669664526709"/>
+    <property key="java.vm.info" value="mixed mode"/>
+    <property key="eclipse.p2.data.area" value="@config.dir/../p2"/>
+    <property key="java.class.version" value="55.0"/>
+    <property key="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property key="org.mule.tooling.runtime.args" value="-XX:-UseBiasedLocking,-Dfile.encoding=UTF-8,-XX:+UseG1GC,-XX:+UseStringDeduplication"/>
+    <property key="sun.jnu.encoding" value="Cp1252"/>
+    <property key="osgi.nl" value="en_US"/>
+    <property key="osgi.syspath" value="c:\AnypointStudio\plugins"/>
+    <property key="equinox.init.uuid" value="true"/>
+    <property key="org.osgi.framework.system.capabilities" value="osgi.ee; osgi.ee=&quot;OSGi/Minimum&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1, 1.2&quot;, osgi.ee; osgi.ee=&quot;JRE&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1&quot;, osgi.ee; osgi.ee=&quot;JavaSE&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 9.0, 10.0, 11.0&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact1&quot;; version:List&lt;Version&gt;=&quot;1.8, 9.0, 10.0, 11.0&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact2&quot;; version:List&lt;Version&gt;=&quot;1.8, 9.0, 10.0, 11.0&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact3&quot;; version:List&lt;Version&gt;=&quot;1.8, 9.0, 10.0, 11.0&quot;"/>
+    <property key="tooling.client.configuration.filter.parameters.reserved.names" value="false"/>
+    <property key="org.eclipse.equinox.launcher.splash.location" value="c:\AnypointStudio\configuration\org.eclipse.equinox.launcher\org.mule.tooling.branding_7.13.0.202207261934\splash.bmp"/>
+    <property key="tooling.client.ExtensionModelServiceCache.diskStore.path" value="C:\anypointstudio-workspace\.mule\plugins-tmp\repository"/>
+    <property key="osgi.arch" value="x86_64"/>
+    <property key="org.osgi.framework.language" value="en"/>
+    <property key="gosh.args" value="--nointeractive"/>
+    <property key="eclipse.launcher.name" value="AnypointStudio"/>
+    <property key="file.separator" value="\"/>
+    <property key="java.vm.compressedOopsMode" value="32-bit"/>
+    <property key="line.separator" value="&#xd;&#xa;"/>
+    <property key="org.osgi.framework.executionenvironment" value="OSGi/Minimum-1.0, OSGi/Minimum-1.1, OSGi/Minimum-1.2, JavaSE/compact1-1.8, JavaSE/compact2-1.8, JavaSE/compact3-1.8, JRE-1.1, J2SE-1.2, J2SE-1.3, J2SE-1.4, J2SE-1.5, JavaSE-1.6, JavaSE-1.7, JavaSE-1.8, JavaSE-9, JavaSE-10, JavaSE-11"/>
+    <property key="user.name" value="test"/>
+    <property key="osgi.framework.useSystemProperties" value="true"/>
+    <property key="org.osgi.framework.vendor" value="Eclipse"/>
+    <property key="tooling.concurrent.local.repository.enabled" value="false"/>
+    <property key="equinox.resolver.revision.batch.size" value="1"/>
+    <property key="eclipse.home.location" value="file:/C:/AnypointStudio/"/>
+    <property key="sun.os.patch.level" value=""/>
+    <property key="https.protocols" value="TLSv1.2,TLSv1.1,TLSv1"/>
+    <property key="maven.repo.local" value="C:\Users\test\.m2\repository"/>
+    <property key="eclipse.stateSaveDelayInterval" value="30000"/>
+    <property key="java.class.path" value="C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"/>
+    <property key="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property key="user.variant" value=""/>
+    <property key="org.osgi.framework.processor" value="x86-64"/>
+    <property key="sun.java.launcher" value="SUN_STANDARD"/>
+    <property key="user.country" value="US"/>
+    <property key="chromium.external_message_pump" value="false"/>
+    <property key="sun.cpu.endian" value="little"/>
+    <property key="osgi.logfile" value="C:\anypointstudio-workspace\.metadata\.log"/>
+    <property key="osgi.install.area" value="file:/C:/AnypointStudio/"/>
+    <property key="jdk.http.auth.tunneling.disabledSchemes" value=""/>
+    <property key="user.language" value="en"/>
+    <property key="eclipse.vm" value="C:\AnypointStudio\\plugins/org.mule.tooling.jdk.win32.x86_64_1.1.4/bin/javaw.exe"/>
+    <property key="eclipse.product" value="org.mule.tooling.branding.mulestudio"/>
+    <property key="eclipse.commands" value="-os&#xa;win32&#xa;-ws&#xa;win32&#xa;-arch&#xa;x86_64&#xa;-showsplash&#xa;-launcher&#xa;C:\AnypointStudio\AnypointStudio.exe&#xa;-name&#xa;AnypointStudio&#xa;--launcher.library&#xa;C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.400.v20211117-0650\eclipse_11602.dll&#xa;-startup&#xa;C:\AnypointStudio\\plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar&#xa;--launcher.overrideVmargs&#xa;-exitdata&#xa;8070_168&#xa;-vm&#xa;C:\AnypointStudio\\plugins/org.mule.tooling.jdk.win32.x86_64_1.1.4/bin/javaw.exe&#xa;"/>
+    <property key="osgi.compatibility.bootdelegation" value="true"/>
+    <property key="MAVEN_OPTS" value=""/>
+    <property key="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property key="osgi.framework" value="file:/c:/AnypointStudio/plugins/org.eclipse.osgi_3.17.200.v20220215-2237.jar"/>
+    <property key="osgi.configuration.area" value="file:/C:/AnypointStudio/configuration/"/>
+    <property key="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property key="org.osgi.framework.os.name" value="win32"/>
+    <property key="osgi.splashPath" value="platform:/base/plugins/org.mule.tooling.branding"/>
+    <property key="org.osgi.supports.framework.extension" value="true"/>
+    <property key="applicationXMI" value="org.eclipse.ui.workbench/LegacyIDE.e4xmi"/>
+    <property key="user.dir" value="C:\AnypointStudio"/>
+    <property key="osgi.ws" value="win32"/>
+    <property key="org.osgi.framework.os.version" value="10.0.0"/>
+    <property key="java.vm.version" value="11.0.15+10"/>
+    <property key="org.dom4j.factory" value="org.mule.tooling.core.sax.SAXDocumentFactoryWithLocator"/>
+    <property key="munit.system.properties.file" value="C:\anypointstudio-workspace\sys-sfdc-account\target\user.system.properties"/>
+    <property key="org.glassfish.grizzly.DEFAULT_MEMORY_MANAGER" value="org.glassfish.grizzly.memory.HeapMemoryManager"/>
+  </properties>
+  <testcase time="0.0" name="get-account-test-suite.xml" classname="MULE_EE.4.4.0.get-account-test-suite">
+    <error>java.lang.IllegalStateException: Cannot start embedded container&#xd;
+	at org.mule.runtime.module.embedded.internal.DefaultEmbeddedContainerBuilder$1.start(DefaultEmbeddedContainerBuilder.java:172)&#xd;
+	at org.mule.munit.remote.container.EmbeddedContainer.start(EmbeddedContainer.java:93)&#xd;
+	at org.mule.munit.remote.container.ContainerSuiteRunDispatcher.runSuites(ContainerSuiteRunDispatcher.java:142)&#xd;
+	at org.mule.munit.remote.RemoteRunner.run(RemoteRunner.java:85)&#xd;
+	at org.mule.munit.remote.RemoteRunner.main(RemoteRunner.java:67)&#xd;
+Caused by: java.lang.IllegalArgumentException: Could not find embedded container bom artifact&#xd;
+	at org.mule.runtime.module.embedded.internal.MavenContainerClassLoaderFactory.create(MavenContainerClassLoaderFactory.java:83)&#xd;
+	at org.mule.runtime.module.embedded.internal.DefaultEmbeddedContainerBuilder$1.start(DefaultEmbeddedContainerBuilder.java:149)&#xd;
+	... 4 more&#xd;
+Caused by: org.mule.maven.client.api.BundleDependenciesResolutionException: org.eclipse.aether.resolution.ArtifactDescriptorException: Failed to read artifact descriptor for com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0&#xd;
+	at org.mule.maven.client.internal.AetherMavenClient.resolveBundleDescriptorDependencies(AetherMavenClient.java:315)&#xd;
+	at org.mule.maven.client.internal.AetherMavenClient.resolveBundleDescriptorDependencies(AetherMavenClient.java:281)&#xd;
+	at org.mule.runtime.module.embedded.internal.MavenContainerClassLoaderFactory.create(MavenContainerClassLoaderFactory.java:55)&#xd;
+	... 5 more&#xd;
+Caused by: org.eclipse.aether.resolution.ArtifactDescriptorException: Failed to read artifact descriptor for com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0&#xd;
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:282)&#xd;
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:198)&#xd;
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.readArtifactDescriptor(DefaultRepositorySystem.java:287)&#xd;
+	at org.mule.maven.client.internal.AetherMavenClient.resolveBundleDescriptorDependencies(AetherMavenClient.java:293)&#xd;
+	... 7 more&#xd;
+Caused by: org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0 in maven-central (https://repo.maven.apache.org/maven2/)&#xd;
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:444)&#xd;
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246)&#xd;
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223)&#xd;
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:267)&#xd;
+	... 10 more&#xd;
+Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find artifact com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0 in maven-central (https://repo.maven.apache.org/maven2/)&#xd;
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:39)&#xd;
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:355)&#xd;
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)&#xd;
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:581)&#xd;
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:249)&#xd;
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:520)&#xd;
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421)&#xd;
+	... 13 more&#xd;
+</error>
+  </testcase>
+</testsuite>

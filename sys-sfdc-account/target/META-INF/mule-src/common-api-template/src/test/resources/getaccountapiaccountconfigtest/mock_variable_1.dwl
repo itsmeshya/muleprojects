@@ -1,0 +1,1 @@
+"select id,name,phone,lastmodifieddate,shippingCity,ShippingState,ShippingCountry,shippingPostalcode,email__c,Active__c,ExternalAccountid__c,OwnerId from account where lastModifiedDate >  2022-09-19T19:19:49.000Z"
