@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+		<sub-flow name="sfdc-preparequery-subflow" doc:id="bc5c68d5-8f0a-47f0-9984-72ee8ba4c8cc" >
+		<ee:transform doc:name="Transform Message" doc:id="c3b6c477-fd1d-48e0-a448-006cfc8c5edb" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+			<ee:variables >
+				<ee:set-variable variableName="queryObject" ><![CDATA[%dw 2.0
+output application/json
+---
+	Mule::p('sfdc.query.get-account') ++ " " ++ (vars.modifiedDate default "")
+ ]]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+		<flow-ref doc:name="sfdc-querySub_Flow" doc:id="b549e617-b0ed-4443-8b53-813434792115" name="sfdc-querySub_Flow"/>
+	</sub-flow>
+	</mule>

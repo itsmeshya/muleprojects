@@ -1,0 +1,41 @@
+
+java.lang.IllegalStateException: Cannot start embedded container
+	at org.mule.runtime.module.embedded.internal.DefaultEmbeddedContainerBuilder$1.start(DefaultEmbeddedContainerBuilder.java:172)
+	at org.mule.munit.remote.container.EmbeddedContainer.start(EmbeddedContainer.java:93)
+	at org.mule.munit.remote.container.ContainerSuiteRunDispatcher.runSuites(ContainerSuiteRunDispatcher.java:142)
+	at org.mule.munit.remote.RemoteRunner.run(RemoteRunner.java:85)
+	at org.mule.munit.remote.RemoteRunner.main(RemoteRunner.java:67)
+Caused by: java.lang.IllegalArgumentException: Could not find embedded container bom artifact
+	at org.mule.runtime.module.embedded.internal.MavenContainerClassLoaderFactory.create(MavenContainerClassLoaderFactory.java:83)
+	at org.mule.runtime.module.embedded.internal.DefaultEmbeddedContainerBuilder$1.start(DefaultEmbeddedContainerBuilder.java:149)
+	... 4 more
+Caused by: org.mule.maven.client.api.BundleDependenciesResolutionException: org.eclipse.aether.resolution.ArtifactDescriptorException: Failed to read artifact descriptor for com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0
+	at org.mule.maven.client.internal.AetherMavenClient.resolveBundleDescriptorDependencies(AetherMavenClient.java:315)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveBundleDescriptorDependencies(AetherMavenClient.java:281)
+	at org.mule.runtime.module.embedded.internal.MavenContainerClassLoaderFactory.create(MavenContainerClassLoaderFactory.java:55)
+	... 5 more
+Caused by: org.eclipse.aether.resolution.ArtifactDescriptorException: Failed to read artifact descriptor for com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:282)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:198)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.readArtifactDescriptor(DefaultRepositorySystem.java:287)
+	at org.mule.maven.client.internal.AetherMavenClient.resolveBundleDescriptorDependencies(AetherMavenClient.java:293)
+	... 7 more
+Caused by: org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0 in maven-central (https://repo.maven.apache.org/maven2/)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:444)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:267)
+	... 10 more
+Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find artifact com.mulesoft.mule.distributions:mule-runtime-impl-bom:pom:4.4.0 in maven-central (https://repo.maven.apache.org/maven2/)
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:39)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:355)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:581)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:249)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:520)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421)
+	... 13 more
+
+=============================================================================
+Tests run: 1 - Failures: 0 - Errors: 1 - Skipped: 0 - Time elapsed: 0.000 sec
+=============================================================================
