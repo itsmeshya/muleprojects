@@ -1,0 +1,79 @@
+{
+  "runToken": "7669d539-d909-4e7a-8542-c1e63483b131",
+  "projectName": "common-api-template",
+  "domainLocation": "",
+  "tags": [],
+  "testNames": [],
+  "suitePaths": [
+    "get-user-test-suite.xml",
+    "get-account-test-suite.xml",
+    "api-account-suite.xml"
+  ],
+  "allSuitePaths": [
+    "get-user-test-suite.xml",
+    "get-account-test-suite.xml",
+    "api-account-suite.xml"
+  ],
+  "skipAfterFailure": false,
+  "notifierConfigurations": [
+    {
+      "clazz": "org.mule.munit.remote.notifiers.ConsoleNotifier",
+      "parameters": [
+        {
+          "name": "runToken",
+          "type": "java.lang.String",
+          "value": "7669d539-d909-4e7a-8542-c1e63483b131"
+        }
+      ]
+    }
+  ],
+  "coverageConfiguration": {
+    "runCoverage": true,
+    "randomizeCoveragePort": true,
+    "suitePaths": [
+      "get-user-test-suite.xml",
+      "get-account-test-suite.xml",
+      "api-account-suite.xml"
+    ],
+    "ignoredFiles": [],
+    "ignoredFlowNames": []
+  },
+  "containerConfiguration": {
+    "type": "EMBEDDED",
+    "value": {
+      "mavenConfiguration": {
+        "settingsXmlFilePath": "C:\\Users\\test\\AppData\\Local\\Temp\\settings-temp-directory\\fa8df6da-f222-474d-8dba-da0b60a579de.xml",
+        "globalSettingsXmlFilePath": "C:\\AnypointStudio\\settings.xml",
+        "mavenRepositoryDirectoryPath": "C:\\Users\\test\\.m2\\repository",
+        "activeProfiles": [],
+        "offlineMode": false,
+        "forcePolicyUpdate": true,
+        "ignoreArtifactDescriptorRepositories": false,
+        "remoteRepositories": [
+          {
+            "id": "mulesoft-releases",
+            "url": "https://repository.mulesoft.org/releases/"
+          },
+          {
+            "id": "central",
+            "url": "https://repo.maven.apache.org/maven2"
+          }
+        ]
+      },
+      "serverPluginConfigurations": [
+        {
+          "groupId": "com.mulesoft.munit.plugins",
+          "artifactId": "munit-coverage-plugin",
+          "version": "2.3.11",
+          "type": "jar",
+          "classifier": "mule-server-plugin"
+        }
+      ],
+      "runtimeId": "4.4.0",
+      "product": "MULE_EE",
+      "munitWorkingDirectoryPath": "C:\\anypointstudio-workspace\\sys-sfdc-account\\target\\munitworkingdir-1870218159166500",
+      "log4JConfigurationFilePath": "C:\\anypointstudio-workspace\\sys-sfdc-account\\target\\test-classes\\log4j2-test.xml",
+      "type": "EMBEDDED"
+    }
+  }
+}

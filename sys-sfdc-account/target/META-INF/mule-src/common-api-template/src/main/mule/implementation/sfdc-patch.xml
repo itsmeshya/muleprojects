@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd">
+	<sub-flow name="sfdc-patch-subflow" doc:id="e0595bef-959b-4eb4-a18b-e48819b624a3" >
+		<until-successful maxRetries="${retry.count}" doc:name="retry" doc:id="03f6d1f2-69a5-4b44-85c0-76b5acd87853" millisBetweenRetries="${retry.interval}">
+			<try doc:name="Try" doc:id="1e288f79-7d18-42cd-9ff3-a8862547e494" >
+				<ee:transform doc:name="Transform Message" doc:id="895a7aa1-814b-4e09-988e-9bfdc1994e6a">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json skipNullOn="everywhere"
+---
+payload map{
+	"Id": $.id,
+	"Name": $.name,
+	"Phone": $.phoneNumber,
+	"EMAIL__c": $.emailAddress,
+	"ShippingAddress": $.shippingAddress,
+	"ShippingCity": $.shippingCity,
+	"ShippingCountry": $.shippingCountry,
+	"ShippingPostalCode": $.shippingPostalCode,
+	"ShippingState": $.shippingState,
+	"Active__c": $.active as String,
+	"ExternalAccountid__c": $.externalAccountId,
+	"OwnerId": $.ownerId
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+				<salesforce:upsert doc:name="Upsert" doc:id="f157c796-edb9-4f36-a855-4eb738c15832" config-ref="Salesforce_Config" objectType="Account" externalIdFieldName="ExternalAccountid__c" />
+				<ee:transform doc:name="Transform Message" doc:id="832bd94f-db0a-4351-bd0e-649ef7d5d408">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+				<logger level="INFO" doc:name="Logger" doc:id="1c09e7b9-3486-4330-a591-0559fba3b0b9" message="#[payload]" category="salesforceresponse"/>
+				<ee:transform doc:name="Transform Message" doc:id="c5b47609-ff8e-4c64-b383-b8be31a6fd06" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload.items map{
+	"id": $.id,
+	"success": $.successful,
+	"error": $.message default ""
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+				<error-handler >
+					<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="d71711bc-6360-4a30-a592-fda2d443cadf" type="SALESFORCE:CONNECTIVITY, SALESFORCE:TIMEOUT">
+						<logger level="INFO" doc:name="Logger" doc:id="db030685-a14a-47db-ac44-254291840f19" message="#[error]"/>
+					</on-error-propagate>
+					<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="1b1b5681-c45d-4160-8408-0d64d5cb7718" >
+						<logger level="INFO" doc:name="Logger" doc:id="7a182111-b2fe-421b-9cd1-8126fb1f437a" message="#[error]"/>
+						<set-variable value="#[error]" doc:name="Set Variable" doc:id="e0105a1a-2d52-4f4a-94a0-0b31893f2581" variableName="processingError"/>
+					</on-error-continue>
+				</error-handler>
+			</try>
+			<choice doc:name="Choice" doc:id="bb71e3d9-e2f5-4a82-b581-03579b94f734" >
+				<when expression="#[!(isEmpty(vars.processingError))]">
+					<ee:transform doc:name="Transform Message" doc:id="bb49bef5-07c4-4188-b8e4-21a79fedfd50">
+						<ee:message>
+							<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"status" : "failed",
+	"error" : vars.processingError
+}]]></ee:set-payload>
+						</ee:message>
+					</ee:transform>
+					<raise-error doc:name="Raise error" doc:id="3386a2e7-0cf9-43dd-83ae-9a5d00623493" type="SFDC:ONERRORCONTINUEERROR" description='"record processing failed"'/>
+				</when>
+				<otherwise >
+					<logger level="INFO" doc:name="Logger" doc:id="7b961bf7-e11d-4746-952f-c57881d13bfb" message='#["Successfully Created/Updated in Salesforce"]'/>
+				</otherwise>
+			</choice>
+		</until-successful>
+	</sub-flow>
+	</mule>
+	

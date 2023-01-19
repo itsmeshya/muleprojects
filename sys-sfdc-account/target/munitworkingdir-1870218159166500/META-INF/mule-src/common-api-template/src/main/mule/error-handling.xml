@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:email="http://www.mulesoft.org/schema/mule/email" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd">
+	<email:smtp-config name="Email_SMTP" doc:name="Email SMTP" doc:id="7e6452f6-010f-467b-bb55-8e3bc73dabeb" >
+		<email:smtp-connection host="${email.host}" port="${email.port}" user="${email.userName}" password="${email.password}" >
+			<email:properties >
+				<email:property key="mail.smtp.starttls.enable" value="true" />
+			</email:properties>
+		</email:smtp-connection>
+	</email:smtp-config>
+	<error-handler name="global-error-handler" doc:id="93264320-ff3a-4476-8a2b-ce7d565a4eb3" >
+		<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="2bb56bfd-70c3-4f1a-85ff-f60b0254932d" >
+			<flow-ref doc:name="common-failure-response " doc:id="aa1b6128-ed05-4955-882e-bed75c765ca6" name="common-failure-response"/>
+			<email:send doc:name="Send" doc:id="4b9d67e7-d559-4882-b3a9-2428e19a8aef" config-ref="Email_SMTP" fromAddress="${email.fromAddress}" subject="${email.subject}">
+				<email:to-addresses >
+					<email:to-address value="${email.toAddress}" />
+				</email:to-addresses>
+				<email:body contentType="text/html" >
+				</email:body>
+			</email:send>
+		</on-error-continue>
+	</error-handler>
+</mule>
